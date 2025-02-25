@@ -9,12 +9,17 @@ const PreviewHero = () => {
       <Logo />
       <Title text='Próximamente... 🚀' />
       <div className='flex gap-4 flex-wrap justify-center'>
-        {socialLinks.map((link) => (
-          <ContactLink
+        {socialLinks.map((link, index) => (
+          <div
             key={link.platform}
-            platform={link.platform}
-            url={link.url}
-          />
+            className={`${
+              index === socialLinks.length - 1
+                ? 'hidden md:block sm:hidden'
+                : ''
+            }`}
+          >
+            <ContactLink platform={link.platform} url={link.url} />
+          </div>
         ))}
       </div>
     </div>
