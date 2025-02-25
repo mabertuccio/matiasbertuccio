@@ -28,7 +28,7 @@ const ContactLink: React.FC<ContactLinkProps> = ({ platform, url }) => {
       href={platform === 'email' ? '#' : url}
       target={platform != 'email' ? '_blank' : '_self'}
       rel='noopener noreferrer'
-      className={`inline-flex items-center justify-center text-white font-medium rounded-md shadow-sm transition-all h-12 ${
+      className={`inline-flex items-center justify-center font-medium rounded-md shadow-sm transition-all h-12 ${
         platform === 'github' || platform === 'linkedin'
           ? 'w-12 bg-indigo-500 hover:bg-indigo-700'
           : 'font-inter px-6 border-2 border-indigo-500 bg-white hover:bg-indigo-700 text-neutral-950 hover:text-neutral-50'
