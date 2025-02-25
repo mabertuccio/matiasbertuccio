@@ -1,5 +1,11 @@
+import PreviewHero from './components/sections/PreviewHero';
+
 const App = () => {
-  return <h1 className='font-bold text-neutral-900'>Hello, World!</h1>;
+  return (
+    <>
+      <PreviewHero />
+    </>
+  );
 };
 
 export default App;
